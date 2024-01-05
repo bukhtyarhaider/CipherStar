@@ -23,7 +23,7 @@
   // COLORS
   --primaryText: #ffffff;
   --accentColor: #ff0090;
-  --backGroundColor: #000;
+  --backGroundColor: #020235;
 
   --gradientColor: linear-gradient(180deg, #ff0090 0%, #9155fd 100%),
     linear-gradient(0deg, #ffffff, #ffffff);
@@ -99,6 +99,19 @@ body {
   color: var(--primaryText);
   background-color: var(--backGroundColor);
   position: relative;
+
+  .gradientTopbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80%;
+  }
+
+  @media screen and (max-width: 767px) {
+    .gradientTopbar {
+      height: 40%;
+    }
+  }
 }
 
 .ant-drawer-wrapper-body {

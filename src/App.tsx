@@ -1,5 +1,8 @@
 import { createContext, useState } from "react";
 import "./main.scss";
+import TopBar from "./components/TopBar/TopBar";
+import { navItems } from "./content";
+import { gradientTopbar } from "./assets";
 
 interface ThemeContextProps {
   theme: string;
@@ -18,7 +21,8 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app-container" id={theme}>
-        <h2>Home</h2>
+        <img className="gradientTopbar" src={gradientTopbar} />
+        <TopBar navItems={navItems} />
       </div>
     </ThemeContext.Provider>
   );
