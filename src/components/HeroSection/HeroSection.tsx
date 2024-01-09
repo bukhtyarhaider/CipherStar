@@ -46,7 +46,7 @@ const HeroSection: React.FC = () => {
 
       <div className={styles.imageContainer}>
         <div className={styles.imageWrap}>
-          <motion.div animate={{ x: 100 }}>
+          <motion.div animate={{ x: 100 }} transition={{ duration: 1 }}>
             <img src={headerPng} />
           </motion.div>
         </div>

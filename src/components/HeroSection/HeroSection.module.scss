@@ -7,6 +7,7 @@
   @include flex(row, center, center);
   margin-top: 67px;
   padding: 20px 90px;
+  padding-bottom: 0;
   padding-right: 100px;
   .headingContainer {
     width: 50%;
@@ -165,7 +166,7 @@
           font-weight: 400;
           padding: 20px;
           margin-top: 40px;
-          margin-bottom: 40px;
+          margin-bottom: 50px;
           background: #ff00901c;
           border-radius: 15px;
         }
@@ -173,16 +174,7 @@
     }
 
     .imageContainer {
-      width: 90%;
-
-      .imageWrap {
-        height: 100%;
-        width: 100%;
-        img {
-          height: 100%;
-          width: 100%;
-        }
-      }
+      display: none;
     }
   }
 }
