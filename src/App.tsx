@@ -3,6 +3,7 @@ import "./main.scss";
 import TopBar from "./components/TopBar/TopBar";
 import { navItems } from "./content";
 import { gradientTopbar } from "./assets";
+import HeroSection from "./components/HeroSection/HeroSection";
 
 interface ThemeContextProps {
   theme: string;
@@ -21,8 +22,11 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app-container" id={theme}>
-        <img className="gradientTopbar" src={gradientTopbar} />
+        <div className="gradientTopbar">
+          <img src={gradientTopbar} />
+        </div>
         <TopBar navItems={navItems} />
+        <HeroSection />
       </div>
     </ThemeContext.Provider>
   );
