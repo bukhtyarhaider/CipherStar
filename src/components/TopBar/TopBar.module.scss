@@ -19,6 +19,18 @@
     }
   }
 
+  .gradientTopbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
   .menuIcon {
     position: relative;
     display: none;
@@ -131,10 +143,15 @@
       }
     }
 
+    .gradientTopbar {
+      height: 200px;
+    }
+
     .menuIcon {
       width: 20px;
       height: 20px;
       display: flex !important;
+      z-index: 1;
     }
 
     .menuContainer {
