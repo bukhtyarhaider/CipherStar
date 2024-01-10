@@ -103,24 +103,6 @@ body {
   color: var(--primaryText);
   background-color: var(--backGroundColor);
   position: relative;
-
-  .gradientTopbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 50%;
-
-    img {
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    .gradientTopbar {
-      height: 180px;
-    }
-  }
 }
 
 .ant-drawer-wrapper-body {

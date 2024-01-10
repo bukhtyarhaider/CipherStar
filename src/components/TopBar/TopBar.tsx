@@ -3,7 +3,7 @@ import { Drawer } from "antd";
 import styles from "./TopBar.module.scss";
 import TopBarProps from "./TopBarProps";
 import { Link } from "react-router-dom";
-import { logo } from "../../assets";
+import { gradientTopbar, logo } from "../../assets";
 
 const TopBar: React.FC<TopBarProps> = ({ navItems }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -38,6 +38,10 @@ const TopBar: React.FC<TopBarProps> = ({ navItems }) => {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className={styles.gradientTopbar}>
+        <img src={gradientTopbar} />
       </div>
 
       <Drawer
