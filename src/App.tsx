@@ -5,6 +5,7 @@ import { navItems } from "./content";
 import HeroSection from "./components/HeroSection/HeroSection";
 import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 import KeyFeatures from "./components/KeyFeatures/KeyFeatures";
+import JoinCipherStar from "./components/JoinCipherStar/JoinCipherStar";
 
 interface ThemeContextProps {
   theme: string;
@@ -27,6 +28,7 @@ function App() {
         <HeroSection />
         <WhyChooseUs />
         <KeyFeatures />
+        <JoinCipherStar />
       </div>
     </ThemeContext.Provider>
   );

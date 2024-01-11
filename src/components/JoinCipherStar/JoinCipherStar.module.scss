@@ -1,0 +1,79 @@
+@import "../../mixins";
+.joinCipherStar {
+  @include flex(row, space-between, center);
+  padding: 50px 90px;
+
+  .imageContainer {
+    width: 48%;
+
+    .imageWrap {
+      height: 475px;
+      width: 475px;
+      padding-right: 60px;
+      padding-left: 20px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .contentContainer {
+    width: 52%;
+    @include flex(column, center, start);
+    gap: 20px;
+    padding-right: 20px;
+    .heading {
+      font-size: 60px;
+      font-weight: 700;
+
+      span {
+        background: var(--gradientColor);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .description {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 28px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .joinCipherStar {
+    @include flex(column, space-between, center);
+    padding: 40px 20px;
+
+    .imageContainer {
+      width: 100%;
+      padding-inline: 40px;
+      .imageWrap {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .contentContainer {
+      width: 100%;
+
+      .heading {
+        font-size: 30px;
+        padding-top: 40px;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+    }
+  }
+}
