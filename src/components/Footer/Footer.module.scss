@@ -1,0 +1,185 @@
+@import "../../mixins";
+.footerContainer {
+  position: relative;
+  text-align: center;
+  padding: 20px 0px;
+  background: var(--backGroundWarmColor);
+  .top {
+    padding: 50px 0;
+    .heading {
+      font-size: 29px;
+      font-weight: 700;
+      line-height: 34px;
+
+      span {
+        background: var(--gradientColor);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    .inputWrapp {
+      @include flex(row, center, center);
+      background-color: var(--primaryText);
+      border: 2px solid var(--accentColor);
+      border-radius: 114px;
+      max-width: 575px;
+      margin-inline: auto;
+      margin-top: 30px;
+      overflow: hidden;
+      input {
+        padding: 10px 20px;
+        width: 100%;
+
+        &::placeholder {
+          color: #bdbdbd;
+          font-family: Outfit;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+
+      .button {
+        background-color: var(--accentColor);
+        height: inherit;
+        padding: 10px 30px;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .bottom {
+    @include flex(row, start, start);
+    padding-inline: 75px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: start;
+    .social {
+      width: 33%;
+      padding-top: 15px;
+      .logoWrapp {
+        width: 110px;
+        padding-bottom: 50px;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .socialIcons {
+        @include flex(row, start, center);
+        gap: 25px;
+
+        img {
+          width: 25px;
+          cursor: pointer;
+          z-index: 10000;
+        }
+      }
+    }
+
+    .contact,
+    .information {
+      width: 33%;
+      z-index: 10000;
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+      }
+
+      .line {
+        background-color: #ffffff33;
+        height: 2px;
+        width: 80%;
+        margin: 10px 0;
+      }
+
+      p,
+      a {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: 0.015em;
+        color: #c9c9c9;
+      }
+    }
+  }
+  .patternFooterSvg {
+    position: absolute;
+    top: -35px;
+    right: 30px;
+  }
+
+  .footerGradientLeft,
+  .footerGradientRight {
+    position: absolute;
+    bottom: 0;
+    height: 98%;
+  }
+
+  .footerGradientLeft {
+    left: 0;
+  }
+
+  .footerGradientRight {
+    right: 0;
+  }
+
+  .copyrights {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.015em;
+    color: #c9c9c9;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footerContainer {
+    .top {
+      padding: 50px 20px;
+      .heading {
+        font-size: 22px;
+        line-height: 32px;
+      }
+      .inputWrapp {
+        .button {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .bottom {
+      @include flex(column, start, start);
+      padding-inline: 20px;
+      padding-top: 10px;
+      .social {
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 50px;
+        .logoWrapp {
+          padding-bottom: 20px;
+        }
+      }
+
+      .contact,
+      .information {
+        width: 100%;
+      }
+    }
+    .patternFooterSvg {
+      top: 280px;
+    }
+
+    .footerGradientLeft,
+    .footerGradientRight {
+      height: 28%;
+    }
+  }
+}
