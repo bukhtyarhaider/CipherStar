@@ -4,7 +4,7 @@ import styles from "./PricingCard.module.scss";
 import { PricingCardProps } from "./PricingCardProps";
 
 const PricingCard: React.FC<PricingCardProps> = ({
-  planName,
+  title,
   popular,
   description,
   price,
@@ -14,7 +14,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
   return (
     <div className={styles.pricingCardContainer}>
       {popular && <h6 className={styles.popular}>Popular</h6>}
-      <h3 className={styles.planeName}>{planName}</h3>
+      <h3 className={styles.planeName}>{title}</h3>
       <p className={styles.description}>{description}</p>
       <p className={styles.priceWrapp}>
         <span className={styles.dollar}>$</span>

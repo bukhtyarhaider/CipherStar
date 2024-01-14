@@ -6,7 +6,7 @@ export interface PricingCardProps {
   /**
    * The name of the pricing plan.
    */
-  planName: string;
+  title: string;
 
   /**
    * The popular tag of the pricing plan.
@@ -29,7 +29,7 @@ export interface PricingCardProps {
   features: string[];
 
   /**
-   * The list of features included in the pricing plan.
+   * Custom button properties for the pricing plan.
    */
   button: CustomButtonProps;
 }

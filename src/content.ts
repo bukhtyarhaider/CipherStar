@@ -6,9 +6,9 @@ import { CustomButtonProps } from "./components/CutomButton/CustomButtonProps";
  * @interface
  */
 interface PricingPlan {
-  /** The name of the pricing plan. */
-  planName: string;
-  /** The popular tag of the pricing plan. */
+  /** The title of the pricing plan. */
+  title: string;
+  /** Represents the popularity status of the pricing plan. */
   popular: boolean;
   /** The price of the pricing plan. */
   price: number;
@@ -16,9 +16,10 @@ interface PricingPlan {
   description: string;
   /** The list of features included in the pricing plan. */
   features: string[];
-
+  /** Custom button properties for the pricing plan. */
   button: CustomButtonProps;
 }
+
 export const navItems = [
   {
     name: "Home",
@@ -86,7 +87,7 @@ export const footerInfo = [
 
 export const pricingPlans: PricingPlan[] = [
   {
-    planName: "Basic",
+    title: "Basic",
     popular: false,
     price: 0,
     description: "A simple start for everyone",
@@ -105,7 +106,7 @@ export const pricingPlans: PricingPlan[] = [
     },
   },
   {
-    planName: "Standerd",
+    title: "Standerd",
     popular: true,
     price: 49,
     description: "For small to medium businesses",
@@ -124,7 +125,7 @@ export const pricingPlans: PricingPlan[] = [
     },
   },
   {
-    planName: "Enterprise",
+    title: "Enterprise",
     popular: false,
     price: 99,
     description: "Solution for big organizations",
