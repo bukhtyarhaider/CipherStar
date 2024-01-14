@@ -1,5 +1,24 @@
 import { feature1Svg, feature2Svg, feature3Svg, feature4Svg } from "./assets";
+import { CustomButtonProps } from "./components/CutomButton/CustomButtonProps";
 
+/**
+ * Represents a pricing plan with details.
+ * @interface
+ */
+interface PricingPlan {
+  /** The name of the pricing plan. */
+  planName: string;
+  /** The popular tag of the pricing plan. */
+  popular: boolean;
+  /** The price of the pricing plan. */
+  price: number;
+  /** A brief description of the pricing plan. */
+  description: string;
+  /** The list of features included in the pricing plan. */
+  features: string[];
+
+  button: CustomButtonProps;
+}
 export const navItems = [
   {
     name: "Home",
@@ -62,5 +81,64 @@ export const footerInfo = [
   {
     name: "Terms and Conditions",
     url: "/",
+  },
+];
+
+export const pricingPlans: PricingPlan[] = [
+  {
+    planName: "Basic",
+    popular: false,
+    price: 0,
+    description: "A simple start for everyone",
+    features: [
+      "Portfolio Tracking",
+      "Price Alerts",
+      "Basic News Access",
+      "Customer Support",
+      "Security",
+    ],
+    button: {
+      title: "Your Current Plan",
+      color: "default",
+      size: "large",
+      outLine: true,
+    },
+  },
+  {
+    planName: "Standerd",
+    popular: true,
+    price: 49,
+    description: "For small to medium businesses",
+    features: [
+      "Unlimited Portfolio Tracking",
+      "Unlimited Price Alerts",
+      "Advance News Access",
+      "Customer Support",
+      "Custom  Security",
+    ],
+    button: {
+      title: "Upgrade",
+      color: "default",
+      size: "large",
+      outLine: true,
+    },
+  },
+  {
+    planName: "Enterprise",
+    popular: false,
+    price: 99,
+    description: "Solution for big organizations",
+    features: [
+      "PayPal payments",
+      "Logic Jumps",
+      "File upload with 5GB storage",
+      "Custom domain support",
+      "And Much More",
+    ],
+    button: {
+      title: "Contact us",
+      color: "default",
+      size: "large",
+    },
   },
 ];

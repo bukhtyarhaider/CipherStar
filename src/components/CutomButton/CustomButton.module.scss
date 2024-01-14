@@ -7,6 +7,7 @@
     transition: 0.3s ease;
     @include flex(row, center, center);
     text-transform: uppercase;
+    width: 100%;
   }
 
   .condensed-button {
