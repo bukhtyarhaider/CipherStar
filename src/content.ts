@@ -45,3 +45,22 @@ export const cardsArray = [
       "We're here to guide you through your crypto journey. Access educational resources and responsive customer support.",
   },
 ];
+
+export const footerInfo = [
+  {
+    name: "Bicycles",
+    url: "/",
+  },
+  {
+    name: "Insurances",
+    url: "/",
+  },
+  {
+    name: "Contact",
+    url: "/",
+  },
+  {
+    name: "Terms and Conditions",
+    url: "/",
+  },
+];
