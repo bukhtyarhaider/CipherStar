@@ -1,0 +1,90 @@
+@import "../../mixins";
+.pricingCardContainer {
+  padding: 20px 40px;
+  background: #ffffff1a;
+  border: 1px solid #ffffffde;
+  border-radius: 9px;
+  min-width: 335px;
+  min-height: 558px;
+  .popular {
+    background: #ffffff33;
+    padding: 5px 15px;
+    @include flex(row, center, center);
+    color: var(--accentColor);
+    border-radius: 24px;
+    margin-right: 30px;
+    float: right;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+  }
+
+  .planeName {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 47px;
+    padding-top: 50px;
+    color: #ffffffde;
+  }
+
+  .description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 31px;
+    padding-bottom: 20px;
+  }
+
+  .planeName,
+  .description,
+  .priceWrapp {
+    text-align: center;
+  }
+
+  .priceWrapp {
+    position: relative;
+    width: fit-content;
+    margin-inline: auto;
+    .dollar {
+      position: absolute;
+      top: 10px;
+      left: -10px;
+    }
+    .price {
+      font-size: 71px;
+      font-weight: 500;
+      line-height: 82px;
+      color: var(--accentColor);
+    }
+  }
+
+  .features {
+    text-align: start;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    li {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 31px;
+      padding-bottom: 15px;
+      list-style: none;
+      @include flex(row, "", center);
+    }
+
+    li::before {
+      content: "\2022"; /* Unicode character for a bullet point (•) */
+      font-size: 2em; /* Adjust the font size to make the circle bigger */
+      color: transparent; /* Set the color of the circle to transparent */
+      border: 2px solid #ffffffde; /* Set the border for the outlined circle */
+      border-radius: 50%; /* Create a circular shape */
+      display: inline-block;
+      width: 10px; /* Set the width of the circle */
+      height: 10px; /* Set the height of the circle */
+      margin-right: 0.5em; /* Optional: Add some space between the circle and the text */
+    }
+  }
+
+  .buttonWrapp {
+    width: 100%;
+  }
+}
