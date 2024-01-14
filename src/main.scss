@@ -1,33 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Diplomata&family=Inter:wght@100;300;400;500;600;700;800;900&family=Outfit:wght@700&display=swap"); // FONTS
+@import url("https://fonts.googleapis.com/css2?family=Diplomata&family=Inter:wght@100;300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap");
 @import "./mixins";
 
 #light {
-  --primaryFont: "Outfit", sans-serif;
-  --secondaryFont: "Inter", sans-serif;
-  --tertiaryFont: "Diplomata", serif;
-
   // COLORS
   --primaryText: #000;
   --accentColor: #ff0090;
   --backGroundColor: #fff;
+  --backGroundWarmColor: #1a1c4a;
+  --cardImagebackGroundColor: #262752;
 
+  // GRADIENTS
   --gradientColor: linear-gradient(180deg, #ff0090 0%, #9155fd 100%),
     linear-gradient(0deg, #ffffff, #ffffff);
+
+  --gradientBorder: linear-gradient(
+    232.1deg,
+    rgba(58, 208, 255, 0.58) 5.3%,
+    rgba(255, 0, 144, 0.58) 80.88%
+  );
+  --gradientBorder2: linear-gradient(180deg, #ff0090 0%, #9155fd 100%);
 }
 
 #dark {
-  --primaryFont: "Outfit", sans-serif;
-  --secondaryFont: "Inter", sans-serif;
-  --tertiaryFont: "Diplomata", serif;
-
   // COLORS
   --primaryText: #ffffff;
   --accentColor: #ff0090;
-  --backGroundColor: #000;
+  --backGroundColor: #020235;
+  --backGroundWarmColor: #1a1c4a;
+  --cardImagebackGroundColor: #262752;
 
+  // GRADIENTS
   --gradientColor: linear-gradient(180deg, #ff0090 0%, #9155fd 100%),
     linear-gradient(0deg, #ffffff, #ffffff);
-
   --gradientBorder: linear-gradient(
     232.1deg,
     rgba(58, 208, 255, 0.58) 5.3%,
@@ -83,6 +87,10 @@ body {
 }
 
 #root {
+  // FONTS
+  --primaryFont: "Outfit", sans-serif;
+  --secondaryFont: "Inter", sans-serif;
+  --tertiaryFont: "Diplomata", serif;
   margin-inline: auto;
   max-width: 1440px;
   display: flex;

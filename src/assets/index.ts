@@ -20,6 +20,8 @@ export { default as arrow } from "./icons/arrow.svg";
 export { default as youtube } from "./icons/youtube.svg";
 export { default as facebook } from "./icons/facebook.svg";
 export { default as instagram } from "./icons/instagram.svg";
-
-
-
+export { default as gradientTopbar } from "./images/gradientTopbar.svg";
+export { default as logo } from "./images/logo.svg";
+export { default as buttonArrow } from "./icons/buttonArrow.svg";
+export { default as footerGradientLeft } from "./images/footerGradientLeft.svg";
+export { default as footerGradientRight } from "./images/footerGradientRight.svg";

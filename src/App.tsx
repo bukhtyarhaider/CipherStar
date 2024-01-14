@@ -1,5 +1,12 @@
 import { createContext, useState } from "react";
 import "./main.scss";
+import TopBar from "./components/TopBar/TopBar";
+import { navItems } from "./content";
+import HeroSection from "./components/HeroSection/HeroSection";
+import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
+import KeyFeatures from "./components/KeyFeatures/KeyFeatures";
+import JoinCipherStar from "./components/JoinCipherStar/JoinCipherStar";
+import Footer from "./components/Footer/Footer";
 
 interface ThemeContextProps {
   theme: string;
@@ -18,7 +25,12 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app-container" id={theme}>
-        <h2>Home</h2>
+        <TopBar navItems={navItems} />
+        <HeroSection />
+        <WhyChooseUs />
+        <KeyFeatures />
+        <JoinCipherStar />
+        <Footer />
       </div>
     </ThemeContext.Provider>
   );

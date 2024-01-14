@@ -1,0 +1,180 @@
+@import "../../mixins";
+
+.heroSectionContainer {
+  position: relative;
+  width: auto;
+  height: 100%;
+  @include flex(row, center, center);
+  margin-top: 67px;
+  padding: 20px 90px;
+  padding-bottom: 0;
+  padding-right: 100px;
+  .headingContainer {
+    width: 50%;
+
+    .headingTop,
+    .headingAccentTop,
+    .headingShadowTop,
+    .headingMiddle,
+    .headingAccentMiddle,
+    .headingShadowMiddle,
+    .headingBottom,
+    .headingAccentBottom,
+    .headingShadowBottom {
+      position: absolute;
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 96px;
+    }
+
+    .headingAccentTop {
+      top: 70px;
+      z-index: 2;
+      color: transparent;
+      -webkit-text-stroke: 2px #812de266;
+    }
+    .headingShadowTop {
+      top: 85px;
+      color: transparent;
+      -webkit-text-stroke: 2px #ff009099;
+    }
+    .headingTop {
+      top: 100px;
+      z-index: 3;
+    }
+
+    // Middle text
+
+    .headingAccentMiddle {
+      top: 155px;
+      z-index: 2;
+      color: transparent;
+      -webkit-text-stroke: 2px #812de266;
+    }
+
+    .headingShadowMiddle {
+      top: 170px;
+      color: transparent;
+      -webkit-text-stroke: 2px #ff009099;
+    }
+    .headingMiddle {
+      top: 185px;
+      z-index: 3;
+    }
+
+    // Bottom text
+    .headingAccentBottom {
+      top: 235px;
+      z-index: 2;
+      color: transparent;
+      -webkit-text-stroke: 2px #812de266;
+    }
+
+    .headingShadowBottom {
+      top: 250px;
+      color: transparent;
+      -webkit-text-stroke: 2px #ff009099;
+    }
+    .headingBottom {
+      top: 265px;
+      z-index: 3;
+    }
+
+    .content {
+      position: absolute;
+      top: 340px;
+      width: 45%;
+      .bottomText {
+        font-family: var(--secondaryFont);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        padding: 30px 0;
+      }
+
+      .buttonWrapper {
+        margin-left: 10px;
+        @include flex(row, start, center);
+        gap: 30px;
+
+        .sellCrypto {
+          font-family: var(--secondaryFont);
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 800;
+          line-height: 19px;
+          color: var(--accentColor);
+          text-transform: uppercase;
+          @include flex(row, center, center);
+
+          span {
+            padding-left: 5px;
+            img {
+              height: 20px;
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .imageContainer {
+    width: 65%;
+
+    .imageWrap {
+      height: 100%;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .heroSectionContainer {
+    @include flex(column, end, center);
+    padding: 20px;
+    padding-right: 90px;
+    padding-bottom: 0;
+    margin-top: 17px;
+    height: 100vh;
+    .headingContainer {
+      width: 100%;
+      .headingTop,
+      .headingAccentTop,
+      .headingShadowTop,
+      .headingMiddle,
+      .headingAccentMiddle,
+      .headingShadowMiddle,
+      .headingBottom,
+      .headingAccentBottom,
+      .headingShadowBottom {
+        font-size: 45px;
+      }
+
+      .content {
+        position: absolute;
+        z-index: 1;
+        top: 350px;
+        width: 90%;
+        .bottomText {
+          font-family: var(--secondaryFont);
+          font-size: 18px;
+          font-weight: 400;
+          padding: 20px;
+          margin-top: 40px;
+          margin-bottom: 50px;
+          background: #ff00901c;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .imageContainer {
+      display: none;
+    }
+  }
+}
