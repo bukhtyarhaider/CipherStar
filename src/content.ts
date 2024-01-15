@@ -6,15 +6,40 @@ import { CustomButtonProps } from "./components/CutomButton/CustomButtonProps";
  * @interface
  */
 interface PricingPlan {
-  /** The title of the pricing plan. */
+  /**
+   * Title of the pricing plan.
+   * @type {string}
+   */
   title: string;
-  /** Represents the popularity status of the pricing plan. */
+
+  /**
+   * Indicates if the pricing plan is popular.
+   * @type {boolean}
+   */
   popular: boolean;
-  /** The price of the pricing plan. */
+
+  /**
+   * Price of the pricing plan.
+   * @type {number}
+   */
   price: number;
-  /** A brief description of the pricing plan. */
+
+  /**
+   * Discount percentage applied to the pricing plan.
+   * @type {number}
+   */
+  discount: number;
+
+  /**
+   * Description of the pricing plan.
+   * @type {string}
+   */
   description: string;
-  /** The list of features included in the pricing plan. */
+
+  /**
+   * List of features included in the pricing plan.
+   * @type {string[]}
+   */
   features: string[];
   /** Custom button properties for the pricing plan. */
   button: CustomButtonProps;
@@ -90,6 +115,7 @@ export const pricingPlans: PricingPlan[] = [
     title: "Basic",
     popular: false,
     price: 0,
+    discount: 10,
     description: "A simple start for everyone",
     features: [
       "Portfolio Tracking",
@@ -109,6 +135,7 @@ export const pricingPlans: PricingPlan[] = [
     title: "Standerd",
     popular: true,
     price: 49,
+    discount: 10,
     description: "For small to medium businesses",
     features: [
       "Unlimited Portfolio Tracking",
@@ -128,6 +155,7 @@ export const pricingPlans: PricingPlan[] = [
     title: "Enterprise",
     popular: false,
     price: 99,
+    discount: 10,
     description: "Solution for big organizations",
     features: [
       "PayPal payments",
