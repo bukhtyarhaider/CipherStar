@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { arrowLeftDown } from "../../assets";
 import { pricingPlans } from "../../content";
 import PricingCard from "../PricingCard/PricingCard";
@@ -5,6 +6,12 @@ import styles from "./PricingPlansSection.module.scss";
 import { Switch } from "antd";
 
 const PricingPlansSection = () => {
+  const [tenure, setTenure] = useState<string>("monthly");
+
+  const toggleSwitch = () => {
+    setTenure(tenure === "monthly" ? "annually" : "monthly");
+  };
+
   return (
     <div className={styles.pricingPlansSectionContainer}>
       <h2 className={styles.heading}>
@@ -20,7 +27,7 @@ const PricingPlansSection = () => {
 
       <div className={styles.switchWrapp}>
         <p>Monthly</p>
-        <Switch />
+        <Switch onChange={toggleSwitch} />
         <p>Annually</p>
 
         <div className={styles.descountCardWrapp}>
@@ -31,6 +38,8 @@ const PricingPlansSection = () => {
       <div className={styles.cardsWrapp}>
         {pricingPlans?.map((plan) => (
           <PricingCard
+            discount={plan.discount}
+            tenure={tenure}
             title={plan.title}
             popular={plan.popular}
             description={plan.description}
