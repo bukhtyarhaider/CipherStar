@@ -25,3 +25,4 @@ export { default as logo } from "./images/logo.svg";
 export { default as buttonArrow } from "./icons/buttonArrow.svg";
 export { default as footerGradientLeft } from "./images/footerGradientLeft.svg";
 export { default as footerGradientRight } from "./images/footerGradientRight.svg";
+export { default as arrowLeftDown } from "./icons/arrow-left-down.svg";
