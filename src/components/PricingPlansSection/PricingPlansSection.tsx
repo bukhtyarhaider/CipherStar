@@ -1,6 +1,8 @@
+import { arrowLeftDown } from "../../assets";
 import { pricingPlans } from "../../content";
 import PricingCard from "../PricingCard/PricingCard";
 import styles from "./PricingPlansSection.module.scss";
+import { Switch } from "antd";
 
 const PricingPlansSection = () => {
   return (
@@ -8,7 +10,6 @@ const PricingPlansSection = () => {
       <h2 className={styles.heading}>
         Pricing <span>Plans</span>
       </h2>
-
       <p className={styles.description}>
         The ultimate solution for managing your cryptocurrency investments and
         staying ahead in the dynamic world of digital assets. Our carefully
@@ -17,6 +18,16 @@ const PricingPlansSection = () => {
         enthusiast.
       </p>
 
+      <div className={styles.switchWrapp}>
+        <p>Monthly</p>
+        <Switch />
+        <p>Annually</p>
+
+        <div className={styles.descountCardWrapp}>
+          <img src={arrowLeftDown} />
+          <p>Save up to 10%</p>
+        </div>
+      </div>
       <div className={styles.cardsWrapp}>
         {pricingPlans?.map((plan) => (
           <PricingCard
