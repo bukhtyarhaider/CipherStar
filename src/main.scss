@@ -127,3 +127,11 @@ body {
 ::-webkit-scrollbar {
   width: 0;
 }
+
+.ant-switch {
+  background: #ffffff81 !important;
+}
+
+.ant-switch.ant-switch-checked {
+  background: var(--accentColor) !important;
+}

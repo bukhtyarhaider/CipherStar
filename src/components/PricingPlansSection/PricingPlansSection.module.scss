@@ -1,0 +1,113 @@
+@import "../../mixins";
+.pricingPlansSectionContainer {
+  @include flex(column, center, center);
+  padding: 50px 70px;
+  padding-top: 100px;
+  text-align: center;
+
+  .heading {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 80px;
+
+    span {
+      background: var(--gradientColor);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .description {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+  }
+
+  .switchWrapp {
+    position: relative;
+    @include flex(row, center, center);
+    gap: 20px;
+    padding: 20px 0;
+    margin-top: 80px;
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      font-size: 19px;
+      font-weight: 400;
+    }
+
+    img {
+      margin-top: 20px;
+    }
+
+    .descountCardWrapp {
+      position: absolute;
+      @include flex(row, center, center);
+      top: -50px;
+      right: -140px;
+
+      p {
+        padding: 5px 15px;
+        color: var(--accentColor);
+        background-color: var(--primaryText);
+        border-radius: 23px;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .cardsWrapp {
+    padding-top: 50px;
+    @include flex(row, space-between, center);
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pricingPlansSectionContainer {
+    padding: 20px;
+    padding-top: 100px;
+    text-align: justify;
+    .heading {
+      font-size: 30px;
+      line-height: 60px;
+    }
+
+    .description {
+      font-size: 16px;
+    }
+
+    .switchWrapp {
+      position: relative;
+      @include flex(row, center, center);
+      gap: 20px;
+      padding: 20px 0;
+      margin-top: 80px;
+
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        font-size: 19px;
+        font-weight: 400;
+      }
+
+      img {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+
+      .descountCardWrapp {
+        flex-direction: row-reverse;
+        right: 20px;
+      }
+    }
+
+    .cardsWrapp {
+      @include flex(column, center, start);
+      padding-inline: 20px;
+    }
+  }
+}
