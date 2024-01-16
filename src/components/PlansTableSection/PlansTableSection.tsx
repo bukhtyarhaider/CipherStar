@@ -31,24 +31,14 @@ interface PlanCellProps {
 }
 
 const PlanCell: React.FC<PlanCellProps> = ({ plan }) => {
-  /**
-   * Gets the content for the cell based on the plan information.
-   * @function getContent
-   * @returns {React.ReactElement} The content for the cell.
-   */
-  const getContent = () => {
-    if (plan.addon) {
-      return <p className={styles.addOn}>ADD-ON AVAILABLE</p>;
-    }
+  if (plan.addon) return <p className={styles.addOn}>ADD-ON AVAILABLE</p>;
 
-    return plan.available ? (
-      <img src={tickIcon} alt="Tick" />
-    ) : (
-      <img src={crossIcon} alt="Cross" />
-    );
-  };
-
-  return <td>{getContent()}</td>;
+  return (
+    <img
+      src={plan.available ? tickIcon : crossIcon}
+      alt={plan.available ? "tick" : "cross"}
+    />
+  );
 };
 
 const PlansTableSection = () => {
@@ -82,9 +72,15 @@ const PlansTableSection = () => {
             {plansTableData.map((plan, index) => (
               <tr key={index} className={index % 2 === 1 ? styles.evenRow : ""}>
                 <td>{plan.feature}</td>
-                <PlanCell plan={plan.starter} />
-                <PlanCell plan={plan.pro} />
-                <PlanCell plan={plan.enterprise} />
+                <td>
+                  <PlanCell plan={plan.starter} />
+                </td>
+                <td>
+                  <PlanCell plan={plan.pro} />
+                </td>
+                <td>
+                  <PlanCell plan={plan.enterprise} />
+                </td>
               </tr>
             ))}
             <tr className={styles.buttonsWrapp}>
