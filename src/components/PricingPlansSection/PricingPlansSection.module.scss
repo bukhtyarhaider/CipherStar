@@ -2,6 +2,7 @@
 .pricingPlansSectionContainer {
   @include flex(column, center, center);
   padding: 50px 70px;
+  padding-top: 100px;
   text-align: center;
 
   .heading {
@@ -68,6 +69,7 @@
 @media screen and (max-width: 767px) {
   .pricingPlansSectionContainer {
     padding: 20px;
+    padding-top: 100px;
     text-align: justify;
     .heading {
       font-size: 30px;
