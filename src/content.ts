@@ -171,3 +171,126 @@ export const pricingPlans: PricingPlan[] = [
     },
   },
 ];
+
+export const plansTableData = [
+  {
+    feature: "15-days free trial",
+    starter: {
+      available: true,
+      addon: false,
+    },
+    pro: {
+      available: true,
+      addon: false,
+    },
+    enterprise: {
+      available: true,
+      addon: false,
+    },
+  },
+  {
+    feature: "No user limit",
+    starter: {
+      available: false,
+      addon: false,
+    },
+    pro: {
+      available: false,
+      addon: false,
+    },
+    enterprise: {
+      available: true,
+      addon: false,
+    },
+  },
+  {
+    feature: "Product Support",
+    starter: {
+      available: false,
+      addon: false,
+    },
+    pro: {
+      available: true,
+      addon: false,
+    },
+    enterprise: {
+      available: true,
+      addon: false,
+    },
+  },
+  {
+    feature: "Email Support",
+    starter: {
+      available: false,
+      addon: false,
+    },
+    pro: {
+      available: true,
+      addon: true,
+    },
+    enterprise: {
+      available: true,
+      addon: false,
+    },
+  },
+  {
+    feature: "Integrations",
+    starter: {
+      available: false,
+      addon: false,
+    },
+    pro: {
+      available: true,
+      addon: false,
+    },
+    enterprise: {
+      available: true,
+      addon: false,
+    },
+  },
+  {
+    feature: "Removal of Front branding",
+    starter: {
+      available: false,
+      addon: false,
+    },
+    pro: {
+      available: true,
+      addon: true,
+    },
+    enterprise: {
+      available: true,
+      addon: false,
+    },
+  },
+  {
+    feature: "Active maintenance & support",
+    starter: {
+      available: false,
+      addon: false,
+    },
+    pro: {
+      available: false,
+      addon: false,
+    },
+    enterprise: {
+      available: true,
+      addon: false,
+    },
+  },
+  {
+    feature: "Data storage for 365 days",
+    starter: {
+      available: false,
+      addon: false,
+    },
+    pro: {
+      available: false,
+      addon: false,
+    },
+    enterprise: {
+      available: true,
+      addon: false,
+    },
+  },
+];
