@@ -1,0 +1,38 @@
+@import "../../mixins";
+
+.customCardContainer {
+  @include flex(column, space-between, center);
+  text-align: center;
+  cursor: pointer;
+  gap: 20px;
+  padding: 10px;
+
+  .gradientWrap {
+    background: var(--gradientBorder);
+    transition: 600ms all ease;
+    padding: 3px;
+    border-radius: 24px;
+    .content {
+      @include flex(column, center, center);
+      background: var(--cardImagebackGroundColor);
+      padding: 20px 10px;
+      border-radius: 24px;
+      .title {
+        font-size: 48px;
+        font-weight: 700;
+        background: var(--gradientColor);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .description {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        padding-inline: 20px;
+        padding-top: 10px;
+      }
+    }
+  }
+}
