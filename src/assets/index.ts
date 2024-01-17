@@ -30,3 +30,4 @@ export { default as crossIcon } from "./icons/cross.svg";
 export { default as tickIcon } from "./icons/tick.svg";
 export { default as aboutPageGreadientLeft } from "./images/aboutPageGreadientLeft.svg";
 export { default as aboutPageGreadientRight } from "./images/aboutPageGreadientRight.svg";
+export { default as graph } from "./images/graph.svg";
