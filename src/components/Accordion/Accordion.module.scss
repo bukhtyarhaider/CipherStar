@@ -1,0 +1,40 @@
+@import "../../mixins";
+.accordionContainer {
+  padding: 15px;
+  background: #FFFFFF33;
+  border: 1.33px solid var(--primaryText);
+  border-radius: 8px;
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+  }
+  .header {
+    @include flex(row, space-between, center);
+    cursor: pointer;
+    .arrow {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .flip {
+      transform: rotate(180deg);
+    }
+  }
+
+  .body {
+    max-height: 0;
+    overflow: hidden;
+
+    p {
+      padding-top: 20px;
+    }
+  }
+
+  .show {
+    max-height: 1000px;
+  }
+}
+.accordionContainerOpen {
+  height: auto;
+}
