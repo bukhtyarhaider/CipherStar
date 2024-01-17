@@ -1,0 +1,46 @@
+@import "../../mixins";
+.FAQsSectionContainer {
+  @include flex(column, start, center);
+  padding: 70px 150px;
+  min-height: 500px;
+  background-color: var(--primaryColorLowOpacity);
+
+  .heading {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .description {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 20px 0;
+    padding-bottom: 50px;
+  }
+
+  .accordionWrapper {
+    padding-bottom: 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FAQsSectionContainer {
+    padding: 40px 20px;
+    min-height: 650px;
+    .heading {
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .description {
+      font-size: 16px;
+      font-weight: 400;
+      padding: 20px 0;
+      padding-bottom: 50px;
+    }
+
+    .accordionWrapper {
+      padding-bottom: 20px;
+    }
+  }
+}
