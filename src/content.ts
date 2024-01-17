@@ -294,3 +294,21 @@ export const plansTableData = [
     },
   },
 ];
+
+export const FAQs = [
+  {
+    title: "Pricing Plans",
+    description:
+      "Explore our flexible pricing plans designed to meet your needs. Discover the features and benefits of each plan to find the best fit for you.",
+  },
+  {
+    title: "Security",
+    description:
+      "Ensuring the safety of your information is our top priority. We implement robust security measures to protect your data and maintain a secure environment. Your trust and privacy are important to us.",
+  },
+  {
+    title: "How To Get Started!",
+    description:
+      "Embark on your journey with us! Learn how to get started quickly and easily. Follow our step-by-step guide to make the most of your experience.",
+  },
+];
