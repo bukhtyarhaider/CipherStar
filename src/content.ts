@@ -312,3 +312,18 @@ export const FAQs = [
       "Embark on your journey with us! Learn how to get started quickly and easily. Follow our step-by-step guide to make the most of your experience.",
   },
 ];
+
+export const buyCryptoCardsData = [
+  {
+    title: "25M+",
+    description: "Join a global community of over 25 million individuals",
+  },
+  {
+    title: "1 Billion",
+    description: "More than 1 billion secure and almost seamless transactions.",
+  },
+  {
+    title: "1k+ Countries",
+    description: "Our international presence underscores our commitment.",
+  },
+];
