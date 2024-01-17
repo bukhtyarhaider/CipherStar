@@ -28,3 +28,5 @@ export { default as footerGradientRight } from "./images/footerGradientRight.svg
 export { default as arrowLeftDown } from "./icons/arrow-left-down.svg";
 export { default as crossIcon } from "./icons/cross.svg";
 export { default as tickIcon } from "./icons/tick.svg";
+export { default as aboutPageGreadientLeft } from "./images/aboutPageGreadientLeft.svg";
+export { default as aboutPageGreadientRight } from "./images/aboutPageGreadientRight.svg";
