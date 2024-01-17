@@ -1,0 +1,143 @@
+@import "../../mixins";
+.aboutCipherStarContainer {
+  padding: 50px 0px;
+  padding-top: 130px;
+  position: relative;
+
+  .heading,
+  .primarySubHeading,
+  .description {
+    padding: 10px 115px;
+  }
+
+  .heading {
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 30px;
+
+    span {
+      background: var(--gradientColor);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .primarySubHeading {
+    font-size: 38px;
+  }
+
+  .primarySubHeading,
+  .secondarySubHeading {
+    font-weight: 700;
+    color: var(--accentColor);
+    text-align: center;
+  }
+
+  .secondarySubHeading {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .description,
+  .descriptionBottom {
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.3px;
+  }
+
+  .descriptionBottom {
+    font-size: 28px;
+  }
+
+  .FAQsSectionWrapper {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .bottomContent {
+    padding: 0 50px;
+    padding-right: 100px;
+
+    .buttonWrapper {
+      padding-top: 40px;
+      width: 30%;
+    }
+  }
+
+  .aboutPageGreadientLeft,
+  .aboutPageGreadientRight {
+    position: absolute;
+    height: 80%;
+    width: 60%;
+    top: 25%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .aboutPageGreadientLeft {
+    left: 0;
+  }
+
+  .aboutPageGreadientRight {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aboutCipherStarContainer {
+    padding: 30px 0px;
+    padding-top: 110px;
+    .heading,
+    .primarySubHeading,
+    .description {
+      padding: 10px 20px;
+    }
+
+    .heading {
+      font-size: 31px;
+    }
+
+    .primarySubHeading {
+      font-size: 28px;
+    }
+
+    .primarySubHeading,
+    .secondarySubHeading {
+      font-weight: 600;
+    }
+
+    .secondarySubHeading {
+      font-size: 26px;
+    }
+
+    .description {
+      font-size: 18px;
+    }
+
+    .descriptionBottom {
+      font-size: 18px;
+    }
+
+    .FAQsSectionWrapper {
+      padding: 40px 0;
+    }
+
+    .bottomContent {
+      padding: 0 20px;
+
+      .buttonWrapper {
+        width: 50%;
+      }
+    }
+  }
+}
