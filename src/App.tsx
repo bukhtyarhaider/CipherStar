@@ -2,11 +2,11 @@ import { createContext, useState } from "react";
 import "./main.scss";
 import TopBar from "./components/TopBar/TopBar";
 import { navItems } from "./content";
-import HeroSection from "./components/HeroSection/HeroSection";
-import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
-import KeyFeatures from "./components/KeyFeatures/KeyFeatures";
-import JoinCipherStar from "./components/JoinCipherStar/JoinCipherStar";
 import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home/Home";
+import { Route, Routes } from "react-router-dom";
+import Router from "./Router";
+import Page404 from "./pages/Page404/Page404";
 
 interface ThemeContextProps {
   theme: string;
@@ -25,12 +25,20 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app-container" id={theme}>
-        <TopBar navItems={navItems} />
-        <HeroSection />
-        <WhyChooseUs />
-        <KeyFeatures />
-        <JoinCipherStar />
-        <Footer />
+        <Routes>
+          <Route
+            path="/*"
+            element={
+              <>
+                <TopBar navItems={navItems} />
+                <Router />
+                <Footer />
+              </>
+            }
+          />
+           <Route path="/404" element={<Page404 />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
       </div>
     </ThemeContext.Provider>
   );
