@@ -26,6 +26,7 @@
 
   .switchWrapp {
     position: relative;
+    z-index: 100;
     @include flex(row, center, center);
     gap: 20px;
     padding: 20px 0;

@@ -30,3 +30,15 @@ export { default as crossIcon } from "./icons/cross.svg";
 export { default as tickIcon } from "./icons/tick.svg";
 export { default as aboutPageGreadientLeft } from "./images/aboutPageGreadientLeft.svg";
 export { default as aboutPageGreadientRight } from "./images/aboutPageGreadientRight.svg";
+export { default as graph } from "./images/graph.svg";
+
+export { default as figmaIcon } from "./icons/404/figma-icon.svg";
+export { default as upworkIcon } from "./icons/404/upwork-icon.svg";
+export { default as switchBg } from "./icons/404/switchbg.svg";
+export { default as switchBgMobile } from "./icons/404/switchbg-mobile.svg";
+export { default as cross1 } from "./icons/404/cross1.svg";
+export { default as cross2 } from "./icons/404/cross2.svg";
+export { default as cross3 } from "./icons/404/cross3.svg";
+export { default as ellipse1 } from "./icons/404/ellipse1.svg";
+export { default as ellipse2 } from "./icons/404/ellipse2.svg";
+export { default as ellipse3 } from "./icons/404/ellipse3.svg";

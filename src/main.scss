@@ -9,7 +9,7 @@
   --backGroundWarmColor: #1a1c4a;
   --cardImagebackGroundColor: #262752;
   --primaryColorLowOpacity: #ffffff1a;
-  
+
   // GRADIENTS
   --gradientColor: linear-gradient(180deg, #ff0090 0%, #9155fd 100%),
     linear-gradient(0deg, #ffffff, #ffffff);
@@ -93,6 +93,14 @@ body {
   --primaryFont: "Outfit", sans-serif;
   --secondaryFont: "Inter", sans-serif;
   --tertiaryFont: "Diplomata", serif;
+  --heading404Font: "AlienEncounter", sans-serif;
+  @font-face {
+    font-family: "AlienEncounter";
+    src: url("./assets/fonts/Alien-Encounters-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
   margin-inline: auto;
   max-width: 1440px;
   display: flex;

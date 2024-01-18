@@ -52,7 +52,7 @@ export const navItems = [
   },
   {
     name: "About",
-    url: "/about-us",
+    url: "/about",
   },
   {
     name: "Pricing",
@@ -94,19 +94,19 @@ export const cardsArray = [
 export const footerInfo = [
   {
     name: "Bicycles",
-    url: "/",
+    url: "/404",
   },
   {
     name: "Insurances",
-    url: "/",
+    url: "/404",
   },
   {
     name: "Contact",
-    url: "/",
+    url: "/404",
   },
   {
     name: "Terms and Conditions",
-    url: "/",
+    url: "/404",
   },
 ];
 
@@ -310,5 +310,20 @@ export const FAQs = [
     title: "How To Get Started!",
     description:
       "Embark on your journey with us! Learn how to get started quickly and easily. Follow our step-by-step guide to make the most of your experience.",
+  },
+];
+
+export const buyCryptoCardsData = [
+  {
+    title: "25M+",
+    description: "Join a global community of over 25 million individuals",
+  },
+  {
+    title: "1 Billion",
+    description: "More than 1 billion secure and almost seamless transactions.",
+  },
+  {
+    title: "1k+ Countries",
+    description: "Our international presence underscores our commitment.",
   },
 ];

@@ -1,0 +1,121 @@
+@import "../../mixins";
+.buyCryptoContainer {
+  padding: 50px 0px;
+  padding-top: 130px;
+  position: relative;
+  .heading {
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 30px;
+
+    span {
+      background: var(--gradientColor);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .description {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.3px;
+    padding-inline: 90px;
+  }
+  .cardsWrapper {
+    @include flex(row, center, start);
+    gap: 10px;
+    padding: 60px 90px;
+  }
+
+  .buttonsWrapper {
+    @include flex(row, center, start);
+    gap: 40px;
+    width: 45%;
+    margin-inline: auto;
+    .button {
+      width: 100%;
+    }
+  }
+
+  .graphWrapper {
+    margin: 60px 100px;
+    background-color: var(--primaryColorLowOpacity);
+    border-radius: 6px;
+    margin-top: 80px;
+    position: relative;
+    z-index: 10;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .aboutPageGreadientLeft,
+  .aboutPageGreadientRight {
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    top: 20%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .aboutPageGreadientLeft {
+    left: 0;
+  }
+
+  .aboutPageGreadientRight {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .buyCryptoContainer {
+    padding: 30px 20px;
+    padding-top: 110px;
+
+    .heading {
+      font-size: 31px;
+    }
+
+    .description {
+      font-size: 18px;
+      padding-inline: 10px;
+      line-height: 30px;
+    }
+
+    .cardsWrapper {
+      @include flex(column, center, start);
+      padding: 40px 0px;
+    }
+
+    .buttonsWrapper {
+      gap: 20px;
+      width: 100%;
+      padding-inline: 10px;
+    }
+
+    .graphWrapper {
+      margin: 60px 20px;
+
+      background-color: var(--primaryColorLowOpacity);
+      border-radius: 6px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .aboutPageGreadientLeft,
+    .aboutPageGreadientRight {
+      top: 35%;
+    }
+  }
+}
