@@ -30,6 +30,7 @@
       input {
         padding: 10px 20px;
         width: 100%;
+        z-index: 100;
 
         &::placeholder {
           color: #bdbdbd;
@@ -42,6 +43,7 @@
       .button {
         background-color: var(--accentColor);
         height: inherit;
+        z-index: 100;
         padding: 10px 30px;
         font-size: 22px;
         font-weight: 700;
@@ -107,6 +109,10 @@
         line-height: 30px;
         letter-spacing: 0.015em;
         color: #c9c9c9;
+      }
+
+      a:hover {
+        color: var(--accentColor);
       }
     }
   }

@@ -52,7 +52,7 @@ export const navItems = [
   },
   {
     name: "About",
-    url: "/about-us",
+    url: "/about",
   },
   {
     name: "Pricing",
@@ -94,19 +94,19 @@ export const cardsArray = [
 export const footerInfo = [
   {
     name: "Bicycles",
-    url: "/",
+    url: "/404",
   },
   {
     name: "Insurances",
-    url: "/",
+    url: "/404",
   },
   {
     name: "Contact",
-    url: "/",
+    url: "/404",
   },
   {
     name: "Terms and Conditions",
-    url: "/",
+    url: "/404",
   },
 ];
 
