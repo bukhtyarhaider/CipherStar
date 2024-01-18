@@ -10,6 +10,7 @@
   right: 0;
   left: 0;
   .logoContainer {
+    z-index: 1;
     .logoWrapper {
       width: 115px;
       img {
@@ -35,6 +36,7 @@
     position: relative;
     display: none;
     cursor: pointer;
+    z-index: 1;
 
     .menuBar1,
     .menuBar2,
@@ -57,6 +59,7 @@
   }
 
   .menuContainer {
+    z-index: 1;
     ul {
       margin: 0;
       padding: 0;
