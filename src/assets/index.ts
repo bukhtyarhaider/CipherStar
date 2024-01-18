@@ -32,6 +32,7 @@ export { default as aboutPageGreadientLeft } from "./images/aboutPageGreadientLe
 export { default as aboutPageGreadientRight } from "./images/aboutPageGreadientRight.svg";
 export { default as graph } from "./images/graph.svg";
 
+// 404 page images
 export { default as figmaIcon } from "./icons/404/figma-icon.svg";
 export { default as upworkIcon } from "./icons/404/upwork-icon.svg";
 export { default as switchBg } from "./icons/404/switchbg.svg";
