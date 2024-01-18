@@ -7,7 +7,6 @@ import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 import KeyFeatures from "./components/KeyFeatures/KeyFeatures";
 import JoinCipherStar from "./components/JoinCipherStar/JoinCipherStar";
 import Footer from "./components/Footer/Footer";
-import Page404 from "./pages/Page404/Page404";
 
 interface ThemeContextProps {
   theme: string;
@@ -32,7 +31,6 @@ function App() {
         <KeyFeatures />
         <JoinCipherStar />
         <Footer />
-        <Page404 />
       </div>
     </ThemeContext.Provider>
   );
