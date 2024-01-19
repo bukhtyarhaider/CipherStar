@@ -4,11 +4,12 @@
   position: relative;
   width: auto;
   height: 100%;
+  min-height: 100vh;
   @include flex(row, center, center);
   margin-top: 67px;
   padding: 20px 90px;
   padding-bottom: 0;
-  padding-right: 100px;
+  padding-right: 0px;
   .headingContainer {
     width: 50%;
 
@@ -120,7 +121,7 @@
   }
 
   .imageContainer {
-    width: 65%;
+    width: 55%;
 
     .imageWrap {
       height: 100%;

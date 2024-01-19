@@ -1,7 +1,6 @@
 import { buttonArrow, headerPng } from "../../assets";
 import CustomButton from "../CutomButton/CustomButton";
 import styles from "./HeroSection.module.scss";
-import { motion } from "framer-motion";
 
 const HeroSection: React.FC = () => {
   return (
@@ -46,9 +45,7 @@ const HeroSection: React.FC = () => {
 
       <div className={styles.imageContainer}>
         <div className={styles.imageWrap}>
-          <motion.div animate={{ x: 100 }} transition={{ duration: 1 }}>
-            <img src={headerPng} />
-          </motion.div>
+          <img src={headerPng} />
         </div>
       </div>
     </div>
