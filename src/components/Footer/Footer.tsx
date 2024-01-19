@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   facebook,
   footerGradientLeft,
@@ -47,7 +48,7 @@ const Footer = () => {
           <h2>Information</h2>
           {footerInfo?.map((info) => (
             <div>
-              <a href={info.url}>{info.name}</a>
+              <Link to={info.url}>{info.name}</Link>
             </div>
           ))}
         </div>
