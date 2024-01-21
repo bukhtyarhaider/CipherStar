@@ -81,6 +81,8 @@
         color: #ff0090b2;
         padding: 8px 12px;
         border-radius: 64px;
+        border-top-right-radius: 136px;
+        border-bottom-right-radius: 0;
         text-transform: uppercase;
         background-color: var(--primaryText);
       }

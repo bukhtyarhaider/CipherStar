@@ -1,10 +1,16 @@
-import { aboutPageGreadientLeft, aboutPageGreadientRight, graph } from "../../assets";
+import { useNavigate } from "react-router-dom";
+import {
+  aboutPageGreadientLeft,
+  aboutPageGreadientRight,
+  graph,
+} from "../../assets";
 import { buyCryptoCardsData } from "../../content";
 import CustomCard from "../CustomCard/CustomCard";
 import CustomButton from "../CutomButton/CustomButton";
 import styles from "./BuyCrypto.module.scss";
 
 const BuyCrypto = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.buyCryptoContainer}>
       <h2 className={styles.heading}>
@@ -31,10 +37,16 @@ const BuyCrypto = () => {
             title="get started"
             size="large"
             color="default"
+            onClick={() => navigate("/404")}
           />
         </div>
         <div className={styles.button}>
-          <CustomButton title="choose plan" size="large" color="default" />
+          <CustomButton
+            title="choose plan"
+            size="large"
+            color="default"
+            onClick={() => navigate("/404")}
+          />
         </div>
       </div>
 

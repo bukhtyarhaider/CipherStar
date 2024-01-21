@@ -25,6 +25,8 @@
     top: 0;
     left: 0;
     height: 400px;
+    animation: fadeIn 1s;
+    @include fadeAnimation;
 
     img {
       height: 100%;
@@ -110,17 +112,16 @@
       color: #ff0090;
     }
 
-    li {
+    a {
+      color: #fff;
+      cursor: pointer;
+      font-weight: 500;
       width: 100% !important;
-      background-color: #000;
-      @include flex(row, center, center);
-      border-radius: 8px;
-
-      a {
-        color: #fff;
-        cursor: pointer;
-        font-weight: 500;
+      li {
+        border-radius: 8px;
         padding: 10px;
+        background-color: #262752;
+        @include flex(row, center, center);
       }
     }
 

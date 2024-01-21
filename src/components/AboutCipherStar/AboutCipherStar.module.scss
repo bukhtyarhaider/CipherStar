@@ -3,7 +3,8 @@
   padding: 50px 0px;
   padding-top: 130px;
   position: relative;
-
+  animation: fadeIn 2.5s;
+  @include fadeAnimation;
   .heading,
   .primarySubHeading,
   .description {
@@ -69,6 +70,8 @@
     .buttonWrapper {
       padding-top: 40px;
       width: 30%;
+      position: relative;
+      z-index: 2;
     }
   }
 

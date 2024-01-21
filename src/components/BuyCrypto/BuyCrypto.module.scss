@@ -3,6 +3,8 @@
   padding: 50px 0px;
   padding-top: 130px;
   position: relative;
+  animation: fadeIn 2.5s;
+  @include fadeAnimation;
   .heading {
     font-size: 42px;
     font-weight: 700;
@@ -35,6 +37,8 @@
     @include flex(row, center, start);
     gap: 40px;
     width: 45%;
+    position: relative;
+    z-index: 2;
     margin-inline: auto;
     .button {
       width: 100%;

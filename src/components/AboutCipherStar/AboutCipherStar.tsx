@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { aboutPageGreadientLeft, aboutPageGreadientRight } from "../../assets";
 import CustomButton from "../CutomButton/CustomButton";
 import FAQsSection from "../FAQsSection/FAQsSection";
 import styles from "./AboutCipherStar.module.scss";
 
 const AboutCipherStar = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.aboutCipherStarContainer}>
       <h2 className={styles.heading}>
@@ -58,6 +60,7 @@ const AboutCipherStar = () => {
             outLine
             color="accent"
             size="large"
+            onClick={() => navigate("/404")}
           />
         </div>
       </div>

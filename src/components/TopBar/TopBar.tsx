@@ -45,8 +45,8 @@ const TopBar: React.FC<TopBarProps> = ({ navItems }) => {
       </div>
 
       <Drawer
-        title={""}
-        closable={false}
+        title={<img src={logo} />}
+        closable={true}
         onClose={toggleDrawer}
         open={openDrawer}
         placement="top"
@@ -54,20 +54,20 @@ const TopBar: React.FC<TopBarProps> = ({ navItems }) => {
         <div className={styles.menuContainerMobile}>
           <ul>
             {navItems.map((label, index) => (
-              <li
-                key={label.name}
-                onClick={() => {
-                  setSelectedIndex(index);
-                  toggleDrawer();
-                }}
+              <Link
+                to={label.url}
+                className={selectedIndex == index ? styles.active : ""}
               >
-                <Link
-                  to={label.url}
-                  className={selectedIndex == index ? styles.active : ""}
+                <li
+                  key={label.name}
+                  onClick={() => {
+                    setSelectedIndex(index);
+                    toggleDrawer();
+                  }}
                 >
                   {label.name}
-                </Link>
-              </li>
+                </li>
+              </Link>
             ))}
           </ul>
         </div>
