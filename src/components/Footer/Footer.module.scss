@@ -21,7 +21,7 @@
     .inputWrapp {
       @include flex(row, center, center);
       background-color: var(--primaryText);
-      border: 2px solid var(--accentColor);
+      border: 1px solid var(--accentColor);
       border-radius: 114px;
       max-width: 575px;
       margin-inline: auto;
@@ -180,7 +180,7 @@
       }
     }
     .patternFooterSvg {
-      top: 280px;
+      top: -30px;
     }
 
     .footerGradientLeft,

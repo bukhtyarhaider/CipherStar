@@ -1,6 +1,7 @@
 @import "../../mixins";
 
 .buttonWrapp {
+  transition: all 0.3s ease-in-out;
   .custom-button {
     background: var(--accentColor);
     color: var(--primaryColor);
@@ -31,6 +32,11 @@
     padding: 10px 30px;
     font-size: 14px;
     font-weight: 700;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
   }
 }
 

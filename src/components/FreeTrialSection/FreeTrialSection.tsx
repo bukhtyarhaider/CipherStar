@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import CustomButton from "../CutomButton/CustomButton";
 import styles from "./FreeTrialSection.module.scss";
 
 const FreeTrialSection = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.freeTrialContainer}>
       <div className={styles.freeTrialContainerWrapp}>
@@ -18,6 +20,7 @@ const FreeTrialSection = () => {
             title="Start 15-day free trial"
             size="small"
             color="default"
+            onClick={() => navigate("/404")}
           />
         </div>
       </div>

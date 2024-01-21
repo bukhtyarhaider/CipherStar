@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { crossIcon, tickIcon } from "../../assets";
 import { plansTableData } from "../../content";
 import CustomButton from "../CutomButton/CustomButton";
@@ -42,6 +43,7 @@ const PlanCell: React.FC<PlanCellProps> = ({ plan }) => {
 };
 
 const PlansTableSection = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.plansTableSectionContainer}>
       <h6>Pick a plan that works best for you</h6>
@@ -91,6 +93,7 @@ const PlansTableSection = () => {
                   size="large"
                   color="default"
                   outLine
+                  onClick={() => navigate("/404")}
                 />
               </td>
               <td>
@@ -98,6 +101,7 @@ const PlansTableSection = () => {
                   title="Choose plan"
                   size="large"
                   color="default"
+                  onClick={() => navigate("/404")}
                 />
               </td>
               <td>
@@ -106,6 +110,7 @@ const PlansTableSection = () => {
                   size="large"
                   color="default"
                   outLine
+                  onClick={() => navigate("/404")}
                 />
               </td>
             </tr>

@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { decentralizationControlSvg, securityFirstSvg } from "../../assets";
 import CustomButton from "../CutomButton/CustomButton";
 import styles from "./WhyChooseUs.module.scss";
 
 const WhyChooseUs = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.whyChooseUsContainer}>
       <h2 className={styles.heading}>
@@ -40,6 +42,7 @@ const WhyChooseUs = () => {
             color="default"
             size="large"
             outLine
+            onClick={() => navigate("/404")}
           />
         </div>
       </div>
@@ -62,6 +65,7 @@ const WhyChooseUs = () => {
             color="default"
             size="large"
             outLine
+            onClick={() => navigate("/404")}
           />
         </div>
       </div>
