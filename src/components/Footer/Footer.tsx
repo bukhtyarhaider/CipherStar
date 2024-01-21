@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   facebook,
   footerGradientLeft,
@@ -11,6 +11,7 @@ import {
 import { footerInfo } from "../../content";
 import styles from "./Footer.module.scss";
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.footerContainer}>
       <div className={styles.top}>
@@ -30,9 +31,9 @@ const Footer = () => {
             <img src={logo} />
           </div>
           <div className={styles.socialIcons}>
-            <img src={instagram} />
-            <img src={facebook} />
-            <img src={youtube} />
+            <img src={instagram} onClick={() => navigate("/404")}/>
+            <img src={facebook} onClick={() => navigate("/404")}/>
+            <img src={youtube} onClick={() => navigate("/404")}/>
           </div>
         </div>
         <div className={styles.contact}>

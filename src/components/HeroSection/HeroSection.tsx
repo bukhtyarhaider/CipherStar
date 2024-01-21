@@ -1,9 +1,11 @@
+import LazyLoad from "react-lazy-load";
 import { buttonArrow, headerPng } from "../../assets";
 import CustomButton from "../CutomButton/CustomButton";
 import styles from "./HeroSection.module.scss";
-import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.heroSectionContainer}>
       <div className={styles.headingContainer}>
@@ -33,23 +35,22 @@ const HeroSection: React.FC = () => {
               size="large"
               color="default"
               outLine
+              onClick={() => navigate("/404")}
             />
-            <div className={styles.sellCrypto}>
-              Sell Crypto{" "}
+            <div className={styles.sellCrypto} onClick={() => navigate("/404")}>
+              Sell Crypto
               <span>
                 <img src={buttonArrow} />
-              </span>{" "}
+              </span>
             </div>
           </div>
         </div>
       </div>
 
       <div className={styles.imageContainer}>
-        <div className={styles.imageWrap}>
-          <motion.div animate={{ x: 100 }} transition={{ duration: 1 }}>
-            <img src={headerPng} />
-          </motion.div>
-        </div>
+        <LazyLoad width={610} height={350}>
+          <img src={headerPng} />
+        </LazyLoad>
       </div>
     </div>
   );

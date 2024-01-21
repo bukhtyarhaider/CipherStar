@@ -2,7 +2,8 @@
 
 .page404Container {
   @include flex(column, center, center);
-
+  animation: fadeIn 2.5s;
+  @include fadeAnimation;
   height: 100vh;
   position: relative;
 

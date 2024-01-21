@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import CustomButton from "../CutomButton/CustomButton";
 import styles from "./PricingCard.module.scss";
 import { PricingCardProps } from "./PricingCardProps";
+import { useNavigate } from "react-router-dom";
 
 const PricingCard: React.FC<PricingCardProps> = ({
   title,
@@ -13,6 +14,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
   discount,
   tenure,
 }) => {
+  const navigate = useNavigate();
   const getSubscriptionFee = useMemo(() => {
     if (tenure === "annually") {
       const anuallFee = price * 12;
@@ -45,7 +47,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         ))}
       </ul>
       <div className={styles.buttonWrapp}>
-        <CustomButton {...button} />
+        <CustomButton {...button} onClick={() => navigate("/404")} />
       </div>
     </div>
   );
